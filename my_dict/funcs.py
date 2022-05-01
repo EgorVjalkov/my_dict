@@ -57,5 +57,5 @@ def test_myself_eng(checks, list=dict):
 
 #print(answer_the_dict(command_dict_git))
 #print(count_the_dict())
-print(test_myself_eng(2, command_dict_git))
+print(test_myself_eng(27))
 #test = choice(dict)
