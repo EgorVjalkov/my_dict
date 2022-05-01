@@ -1,17 +1,18 @@
 from my_dict import dict
 from random import choice
+from my_dict_commnd import command_dict_git
 #from my_errors import my_errors
 
 
 #Сколько слов в словаре
-def count_the_dict():
-    return dict.__len__()
+def count_the_dict(list=dict):
+    return list.__len__()
 
 
 #Спроси у словаря
-def answer_in_eng():
-    a = input('What`s a word?\n')
-    for i in dict:
+def answer_the_dict(list=dict):
+    a = input('What`s a word/command?\n')
+    for i in list:
         if a == i[0]:
             return i[1:]
     return 'not found in dict'
@@ -54,7 +55,7 @@ def test_myself_eng(checks, list=dict):
 #    dict.append([word, meaning])
 #    return dict
 
-print(answer_in_eng())
+#print(answer_the_dict(command_dict_git))
 #print(count_the_dict())
-#print(test_myself_eng(2))
+print(test_myself_eng(2, command_dict_git))
 #test = choice(dict)
