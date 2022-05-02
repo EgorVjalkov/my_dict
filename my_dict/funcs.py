@@ -1,7 +1,7 @@
 from my_dict import dict
 from random import choice
 from my_dict_commnd import command_dict_git
-#from my_errors import my_errors
+from my_errors import my_errors
 
 
 #Сколько слов в словаре
@@ -28,6 +28,14 @@ def test_myself_eng(checks, list=dict):
     # блок по проверке длины словаря
     if checks > limit:
         checks = int(input(f'Enter a new count of checks, which <= {limit}:\n'))
+    # блок по выбору индекса как начало теста
+    start = input('From begin or end? Or from all? Or get index? \n')
+    if start == 'begin': list = list[:checks]
+    elif start == 'end': list = list[-checks:]
+    elif start == 'all': list
+    elif type(int(start)) == int: 
+        if checks > len(list)-int(start): list = list[len(list)-checks:]
+        else: list = list[int(start):int(start)+checks]
     # блок по подбору вопросов
     while (i+1) <= checks and (i+1) <= limit:
         test = choice(list)
@@ -55,7 +63,7 @@ def test_myself_eng(checks, list=dict):
 #    dict.append([word, meaning])
 #    return dict
 
-#print(answer_the_dict(command_dict_git))
+#print(answer_the_dict(my_errors))
 #print(count_the_dict())
-print(test_myself_eng(27))
+print(test_myself_eng(5))
 #test = choice(dict)
