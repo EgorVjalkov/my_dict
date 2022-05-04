@@ -26,23 +26,24 @@ def test_myself_eng(checks, list=dict):
     errors = []
     limit = len(list)
     # блок по проверке длины словаря
-    if checks > limit:
-        checks = int(input(f'Enter a new count of checks, which <= {limit}:\n'))
+    if checks > limit: 
+        print(f'Количество вопросов превышает объем словаря, будет изменено на {limit}.')
+        checks = limit
     # блок по выбору индекса как начало теста
-    start = input('From begin or end? Or from all? Or get index? \n')
-    if start == 'begin': list = list[:checks]
-    elif start == 'end': list = list[-checks:]
-    elif start == 'all': list
-    elif type(int(start)) == int: 
-        if checks > len(list)-int(start): list = list[len(list)-checks:]
-        else: list = list[int(start):int(start)+checks]
+    else: 
+        start = input('From begin or end? Or get index? \n')
+        if start == 'begin' or start == '': list = list[:checks]
+        elif start == 'end': list = list[-checks:]
+        elif type(int(start)) == int: 
+            if checks > len(list)-int(start): list = list[len(list)-checks:]
+            else: list = list[int(start):int(start)+checks]
     # блок по подбору вопросов
-    while (i+1) <= checks and (i+1) <= limit:
+    while (i+1) <= checks:
         test = choice(list)
         print(f'\t{test[0]}')
         a = input('What does it mean?\n')
         right_answer = 0
-        # блок по проверке ответа
+        # блок по проверке ответа среди значений
         for meaning in test[1:]:
             if a == meaning:
                 sum += 1
