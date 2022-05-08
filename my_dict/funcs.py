@@ -66,5 +66,5 @@ def test_myself_eng(checks, list=dict):
 
 #print(answer_the_dict(my_errors))
 #print(count_the_dict())
-print(test_myself_eng(5))
+print(test_myself_eng(6))
 #test = choice(dict)
