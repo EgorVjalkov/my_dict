@@ -1,2 +1,4 @@
 #Ignore VSCode cache
-__pycache__
+__pycache__/
+bin/
+lib/

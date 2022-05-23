@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "my_dict_poetry"
+version = "1.1.13"
+description = "my dictionary"
+authors = ["Egor Vjalkov <e.vjalkov@yandex.ru>"]
+
+packages = [
+    { include = "scripts" }
+]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+
+[tool.poetry.scripts]
+add-new = "scripts.add_func:print_a_new"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"

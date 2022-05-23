@@ -2,7 +2,7 @@ from my_dict import dict
 from random import choice
 from my_dict_commnd import command_dict_git
 from my_errors import my_errors
-
+from tails_dict import *
 
 #Сколько слов в словаре
 def count_the_dict(list=dict):
@@ -64,7 +64,7 @@ def test_myself_eng(checks, list=dict):
 #    dict.append([word, meaning])
 #    return dict
 
-#print(answer_the_dict(my_errors))
+print(answer_the_dict())
 #print(count_the_dict())
-print(test_myself_eng(6))
+#print(test_myself_eng(6))
 #test = choice(dict)
