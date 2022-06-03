@@ -64,7 +64,7 @@ def test_myself_eng(checks, list=dict):
 #    dict.append([word, meaning])
 #    return dict
 
-print(answer_the_dict())
+#print(answer_the_dict())
 #print(count_the_dict())
-#print(test_myself_eng(6))
+print(test_myself_eng(40, tails_dict_23_5))
 #test = choice(dict)
